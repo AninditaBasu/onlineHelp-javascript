@@ -1,4 +1,11 @@
 # onlineHelp-javascript
 javascript code for HTML for your online help
 
-Before you can use these files, you'll need jQuery library. You can either download the library from the jQuery.com or link to the library from a CDN such as Google. Whichever method you choose, remember to point your HTML files to the library by suitably editing the source code of the HTML files.
+The files use the jQuery library.
+
+If the final output of your online help files is HTML, you can include these code snippets in your HTML transforms.
+All of the effects are implemented through classes and will work on any element that can take a class.
+
+For details about these files, read the documentation.html file.
+
+

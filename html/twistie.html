@@ -1,92 +1,94 @@
 <html>
+
 <head>
 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
 
 <script type="text/javascript" src="../scripts/twistie.js"></script>
 
 <link rel="stylesheet" type="text/css" href = "../css/main.css"/>
 <!--<link rel="stylesheet" type="text/css" href = "http://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css"/>-->
 
+<title>Twisties in HTML</title>
+
 </head>
+
 <body>
+
 <h1>Twisties</h1>
+
 <p class = "shortdesc">
-Example implementation for the twistie.js file. Useful if you follow Progressive Disclosure concepts in your documentation, and want to make available additional information only on demand. To implement this widget, use the "menu" class on the element that contains the additional information, as shown in the following code snippet:
-<code>&lt;div class = "menu"&gt;Lorem lorem lorem&lt;div&gt;</code>
+You might want to include twisties in your documentation if you believe in Progressive Disclosure, and want to make available additional information only on demand. The twistie is implemented through the "menu" class on the element that contains the additional information. This page contains an example implementation for the twistie.js file, and the instructions for using it in your help files. 
 </p>
 
+<ul>
+<li><a href = "#how">How to implement twisties</a></li>
+<li><a href = "#example">Example of twisties in action</a></li>
+</ul>
+
+<h3 id = "how">How to implement twisties</h3>
+<ul>
+<li>If you author in DITA, do these two things:
+	<ol>
+	<li>Include the twistie.js file in your DITA to XHTML transformation. When a DITA element with an "outputclass" attribute is processed through DITA OT, the generated HTML element automatically gets a "class" attribute with the same value as the corresponding DITA element "outputclass".</li>	
+	<li>Put "menu" as the value in the "outputclass" attribute of the element that contains the additional information, like this:
+	<pre>
+	&lt;note outputclass = "menu"&gt;Lorem lorem lorem&lt;note&gt;</pre>
+	</li>
+	</ol>
+</li>
+
+<li>If you author directly in HTML, do these two things:
+	<ol>
+	<li>Include the following code within the "head" tag of the HTML file:	
+	<pre>
+	&lt;script src="https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+	&lt;script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="../scripts/twistie.js"&gt;&lt;/script&gt;</pre>
+	</li>
+	<li>For the element that contains the additional information, specify a "class" attribute with a value of "menu", like this:
+	<pre>
+	&lt;div class = "menu"&gt;Lorem lorem lorem&lt;div&gt;</pre>
+	</li>
+	</ol>
+</li>
+</ul>
+
+<h3 id = "example">Example of twisties in action</h3>
 <div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak.
-Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona.
-Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla. Dil hi to hai, na sang-o-khisht, dard se na bhar aye kyun? 
-Ek din hamare annsoon humse pooch baithe...humey roz -roz kyon bulate ho.
-Fir kuch is dil ko beqaraari hai, seena zoya-e-zakhm-e-kaari hai.
-Go hath ko jumbish nahin ankhon men to dum hai, rehne do abhi sagar-o-meena mere aage.
-Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? 
-Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke.
-Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal achchha hai.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak. Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona.
+Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla.
 </p>
 </div>
 
 <div class="menu">
-<p>Lorem ipsum <u>(expand/collapse)</u></p>
+<p>Twistie one <u>(expand/collapse)</u></p>
 <p>Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak.
 Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona.
 Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla.</p>
 </div>
 
 <div>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak.
-Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona.
-Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla. Dil hi to hai, na sang-o-khisht, dard se na bhar aye kyun? 
-Ek din hamare annsoon humse pooch baithe...humey roz -roz kyon bulate ho.
-Fir kuch is dil ko beqaraari hai, seena zoya-e-zakhm-e-kaari hai.
-Go hath ko jumbish nahin ankhon men to dum hai, rehne do abhi sagar-o-meena mere aage.
-Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? 
-Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke.
-Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal achchha hai.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+<p>Dil hi to hai, na sang-o-khisht, dard se na bhar aye kyun? Ek din hamare annsoon humse pooch baithe...humey roz -roz kyon bulate ho. Fir kuch is dil ko beqaraari hai, seena zoya-e-zakhm-e-kaari hai. Go hath ko jumbish nahin ankhon men to dum hai, rehne do abhi sagar-o-meena mere aage.
 </p>
 </div>
 
 <div>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
-<div class="menu">
-<p>Dolor sit amet <u>(expand/collapse)</u></u></p>
-<p>Dil hi to hai, na sang-o-khisht, dard se na bhar aye kyun? 
-Ek din hamare annsoon humse pooch baithe...humey roz -roz kyon bulate ho.
-Fir kuch is dil ko beqaraari hai, seena zoya-e-zakhm-e-kaari hai.
-Go hath ko jumbish nahin ankhon men to dum hai, rehne do abhi sagar-o-meena mere aage.</p>
-</div>
-
-<div>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak.
-Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona.
-Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla. Dil hi to hai, na sang-o-khisht, dard se na bhar aye kyun? 
-Ek din hamare annsoon humse pooch baithe...humey roz -roz kyon bulate ho.
-Fir kuch is dil ko beqaraari hai, seena zoya-e-zakhm-e-kaari hai.
-Go hath ko jumbish nahin ankhon men to dum hai, rehne do abhi sagar-o-meena mere aage.
-Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? 
-Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke.
-Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal achchha hai.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-</p>
-</div>
 
 <div class="menu">
-<p>Consectetur <u>(expand/collapse)</u></p>
-<p>Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? 
-Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke.
+<p>Twistie two <u>(expand/collapse)</u></p>
+<p>Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke.
 Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal achchha hai.</p>
 </div>
 
+<div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+
 </body>
+
 </html>

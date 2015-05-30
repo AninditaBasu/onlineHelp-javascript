@@ -1,0 +1,81 @@
+<html>
+
+<head>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../scripts/fnotehovertext.js"></script>
+
+<link rel="stylesheet" type="text/css" href = "../css/main.css"/>
+
+<title>Footnotes as hovertext</title>
+
+</head>
+
+<body>
+
+<h1>Footnotes as hovertext</h1>
+
+<p class = "shortdesc">
+Footnotes contain additional information placed at the bottom of a page; information that is relevant but not strictly needed for understanding the text that is being read. Because of its very nature (<i>foot</i>note), a footnote on being clicked immediately results in the page scrolling down to the very bottom; the reader has to, thereafter, manually return to the point being read earlier. Presenting the footnote text as a hover text on mouseover gives a reader the option to not jump immediately to the bottom of the page.
+</p>
+
+<ul>
+<li><a href = "#how">How to implement hovertext for footnotes</a></li>
+<li><a href = "#example">Example of footnote as hovertext in action</a></li>
+<li><a href = "#where">Where is the Javascript code</a></li>
+</ul>
+
+<h3 id = "how">How to implement hovertext for footnotes</h3>
+
+<ul>
+<li>If you author in DITA, this solution will not work. One option is to define a style rule that renders the text within an &lt;fn&gt; element inside a popup box on mouseover.
+</li>
+
+<li>If you author in HTML, do these three things:
+	<ol>
+	<li>Include the following code within the "head" tag of the HTML file:	
+	<pre>
+	&lt;script src="https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="../scripts/fnotehovertext.js"&gt;&lt;/script&gt;</pre>
+	</li>
+	<li>At the location where you place the footnote cross-reference, for the &lt;a&gt; element, specify a "rel" attribute with the value "footnote", like this:
+	<pre>
+	&lt;a rel = "footnote" href = "#ID_of_footnote"&gt;Footnote number&lt;div&gt;</pre>
+	</li>
+	<li>To control the appearance of the hovertext box, in the CSS file, specify a style rule for "#footnotediv".</li>
+	</ol>
+</li>
+</ul>
+
+<h3 id = "example">Example of footnote as hovertext in action</h3>
+
+<div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<sup><a href = "#fn1" rel = "footnote">1</a></sup> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak. Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen insaan hona. Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+</div>
+
+<div>
+<p>Lorem ipsum dolor sit amet, consectetur<sup><a href = "#fn2" rel = "footnote">2</a></sup> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak. Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona. Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla. Dil hi to hai, na sang-o-khisht, dard se na bhar aye kyun? Ek din hamare annsoon humse pooch baithe...humey roz -roz kyon bulate ho. Fir kuch is dil ko beqaraari hai, seena zoya-e-zakhm-e-kaari hai. Go hath ko jumbish nahin ankhon men to dum hai, rehne do abhi sagar-o-meena mere aage. Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke. Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal achchha hai. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+</div>
+
+<div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak. Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona. Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla. Dil hi to hai, na sang-o-khisht, dard se na bhar aye kyun? Ek din hamare annsoon humse pooch baithe...humey roz -roz kyon bulate ho. Fir kuch is dil ko beqaraari hai, seena zoya-e-zakhm-e-kaari hai. Go hath ko jumbish nahin ankhon men to dum hai, rehne do abhi sagar-o-meena mere aage. Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke. Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal achchha hai. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+</div>
+
+<div>
+<hr width = 25% align = "left"/>
+<h4>Footnotes</h4>
+<p id = "fn1">1. Ab kya misaal doon main tumhare shabab ki. See <a href = "http://twitter.com">chahak</a>.</p>
+<p id = "fn2">2. Aadmi musafir hai, aata hai jaata hai. Ik din bik jayega maati ke mol.</p>
+<hr width = 25% align = "left"/>
+</div>
+
+<h3 id = "where">Where is the Javascript code</h3>
+
+<p>In the "scripts" folder, "fnotehovertext.js" file.</p>
+
+</body>
+
+</html>

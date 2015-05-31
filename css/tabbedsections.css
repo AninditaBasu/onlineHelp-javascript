@@ -1,0 +1,19 @@
+.tabs {
+	border: 1px solid navy;
+}
+
+.tabs ul {
+	list-style-type:none;
+	padding: 2px;
+	border-bottom: 1px solid navy;
+}
+
+.tabs ul li a {
+	text-decoration:none;
+	background-color: #BDBDBD;
+	padding: .2em 1em;
+}
+
+.tabs li {
+    display: inline;
+}

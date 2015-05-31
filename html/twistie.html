@@ -4,10 +4,10 @@
 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
 <script type="text/javascript" src="../scripts/twistie.js"></script>
 
 <link rel="stylesheet" type="text/css" href = "../css/main.css"/>
+<link rel="stylesheet" type="text/css" href = "../css/twistie.css"/>
 
 <title>Twisties in HTML</title>
 
@@ -18,42 +18,15 @@
 <h1>Twisties</h1>
 
 <p class = "shortdesc">
-Twisties are blocks of content that expand or collapse on click, and thus reveal or hide the information contained therein.  Twisties are one method of making available additional information only on demand. In this example, the twistie is implemented through the twistie.js file by using a "menu" class on the element that contains the additional information. 
+Twisties are blocks of content that expand or collapse on click, and thus reveal or hide the information contained therein.  Twisties are one method of making available additional information only on demand. In this example, the twistie is implemented through the twistie.js file by using a "twistie" class on the element that contains the additional information. 
 </p>
 
 <ul>
-<li><a href = "#how">How to implement twisties</a></li>
 <li><a href = "#example">Example of twisties in action</a></li>
-<li><a href = "#where">Where is the Javascript code</a></li>
+<li><a href = "#how">How to implement twisties</a></li>
+<li><a href = "#where">Where is the Javascript code and stylesheet file</a></li>
 </ul>
 
-<h3 id = "how">How to implement twisties</h3>
-<ul>
-<li>If you author in DITA, do these two things:
-	<ol>
-	<li>Include the twistie.js file in your DITA to XHTML transformation. When a DITA element with an "outputclass" attribute is processed through DITA OT, the generated HTML element automatically gets a "class" attribute with the same value as the corresponding DITA element "outputclass".</li>	
-	<li>Put "menu" as the value in the "outputclass" attribute of the element that contains the additional information, like this:
-	<pre>
-	&lt;note outputclass = "menu"&gt;Lorem lorem lorem&lt;note&gt;</pre>
-	</li>
-	</ol>
-</li>
-
-<li>If you author directly in HTML, do these two things:
-	<ol>
-	<li>Include the following code within the "head" tag of the HTML file:	
-	<pre>
-	&lt;script src="https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
-	&lt;script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="../scripts/twistie.js"&gt;&lt;/script&gt;</pre>
-	</li>
-	<li>For the element that contains the additional information, specify a "class" attribute with a value of "menu", like this:
-	<pre>
-	&lt;div class = "menu"&gt;Lorem lorem lorem&lt;div&gt;</pre>
-	</li>
-	</ol>
-</li>
-</ul>
 
 <h3 id = "example">Example of twisties in action</h3>
 <div>
@@ -63,7 +36,7 @@ Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saa
 </p>
 </div>
 
-<div class="menu">
+<div class="twistie">
 <p>Twistie one <u>(expand/collapse)</u></p>
 <p>Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak.
 Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona.
@@ -79,7 +52,7 @@ Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saa
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 
-<div class="menu">
+<div class="twistie">
 <p>Twistie two <u>(expand/collapse)</u></p>
 <p>Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke.
 Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal achchha hai.</p>
@@ -89,8 +62,37 @@ Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal a
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </div>
 
-<h3 id = "where">Where is the Javascript code</h3>
-<p>In the "scripts" folder, "twistie.js" file.</p>
+<h3 id = "how">How to implement twisties</h3>
+<ul>
+<li>If you author in DITA, do these two things:
+	<ol>
+	<li>Include the "twistie.js" and "twistie.css" files in your DITA to XHTML transformation. When a DITA element with an "outputclass" attribute is processed through DITA OT, the generated HTML element automatically gets a "class" attribute with the same value as the corresponding DITA element "outputclass".</li>	
+	<li>Put "twistie" as the value in the "outputclass" attribute of the element that contains the additional information, like this:
+	<pre>
+	&lt;note outputclass = "twistie"&gt;Lorem lorem lorem&lt;note&gt;</pre>
+	</li>
+	</ol>
+</li>
+
+<li>If you author directly in HTML, do these two things:
+	<ol>
+	<li>Include the following code within the "head" tag of the HTML file (and place the local files in the correct folders):	
+	<pre>
+	&lt;script src="https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+	&lt;script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="../scripts/twistie.js"&gt;&lt;/script&gt;
+	&lt;link rel="stylesheet" type="text/css" href = "../css/twistie.css"/&gt;</pre>
+	</li>
+	<li>For the element that contains the additional information, specify a "class" attribute with a value of "twistie", like this:
+	<pre>
+	&lt;div class = "twistie"&gt;Lorem lorem lorem&lt;div&gt;</pre>
+	</li>
+	</ol>
+</li>
+</ul>
+
+<h3 id = "where">Where is the Javascript code and stylesheet file</h3>
+<p>The Javascript code is in the "scripts" folder, "twistie.js" file. The styling rule is in the "css" folder, "twistie.css" file.</p>
 
 </body>
 

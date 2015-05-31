@@ -6,6 +6,7 @@
 <script type="text/javascript" src="../scripts/fnotehovertext.js"></script>
 
 <link rel="stylesheet" type="text/css" href = "../css/main.css"/>
+<link rel="stylesheet" type="text/css" href = "../css/fnotehovertext.css"/>
 
 <title>Footnotes as hovertext</title>
 
@@ -20,32 +21,11 @@ Footnotes contain additional information placed at the bottom of a page; informa
 </p>
 
 <ul>
-<li><a href = "#how">How to implement hovertext for footnotes</a></li>
 <li><a href = "#example">Example of footnote as hovertext in action</a></li>
-<li><a href = "#where">Where is the Javascript code</a></li>
+<li><a href = "#how">How to implement hovertext for footnotes</a></li>
+<li><a href = "#where">Where is the Javascript code and stylesheet file</a></li>
 </ul>
 
-<h3 id = "how">How to implement hovertext for footnotes</h3>
-
-<ul>
-<li>If you author in DITA, this solution will not work. One option is to define a style rule that renders the text within an &lt;fn&gt; element inside a popup box on mouseover.
-</li>
-
-<li>If you author in HTML, do these three things:
-	<ol>
-	<li>Include the following code within the "head" tag of the HTML file:	
-	<pre>
-	&lt;script src="https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="../scripts/fnotehovertext.js"&gt;&lt;/script&gt;</pre>
-	</li>
-	<li>At the location where you place the footnote cross-reference, for the &lt;a&gt; element, specify a "rel" attribute with the value "footnote", like this:
-	<pre>
-	&lt;a rel = "footnote" href = "#ID_of_footnote"&gt;Footnote number&lt;div&gt;</pre>
-	</li>
-	<li>To control the appearance of the hovertext box, in the CSS file, specify a style rule for "#footnotediv".</li>
-	</ol>
-</li>
-</ul>
 
 <h3 id = "example">Example of footnote as hovertext in action</h3>
 
@@ -72,9 +52,31 @@ Footnotes contain additional information placed at the bottom of a page; informa
 <hr width = 25% align = "left"/>
 </div>
 
-<h3 id = "where">Where is the Javascript code</h3>
+<h3 id = "how">How to implement hovertext for footnotes</h3>
 
-<p>In the "scripts" folder, "fnotehovertext.js" file.</p>
+<ul>
+<li>If you author in DITA, this solution will not work. One option is to define a style rule that renders the text within an &lt;fn&gt; element inside a popup box on mouseover.
+</li>
+
+<li>If you author in HTML, do these two things:
+	<ol>
+	<li>Include the following code within the "head" tag of the HTML file (and place the local files in the correct folders):	
+	<pre>
+	&lt;script src="https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="../scripts/fnotehovertext.js"&gt;&lt;/script&gt;
+	&lt;link rel="stylesheet" type="text/css" href = "../css/fnotehovertext.css"/&gt;</pre>
+	</li>
+	<li>At the location where you place the footnote cross-reference, for the &lt;a&gt; element, specify a "rel" attribute with the value "footnote", like this:
+	<pre>
+	&lt;a rel = "footnote" href = "#ID_of_footnote"&gt;Footnote number&lt;div&gt;</pre>
+	</li>
+	</ol>
+</li>
+</ul>
+
+<h3 id = "where">Where is the Javascript code and stylesheet file</h3>
+
+<p>The Javascript code is in the "scripts" folder, "fnotehovertext.js" file. The styling rule is in the "css" folder, "fnotehovertext.css" file.</p>
 
 </body>
 

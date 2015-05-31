@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $(".menu").accordion({collapsible: true, active: false});
+    $(".twistie").accordion({collapsible: true, active: false});
 });

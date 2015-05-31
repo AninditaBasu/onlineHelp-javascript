@@ -1,0 +1,139 @@
+<html>
+
+<head>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript" src="../scripts/tabbedsections.js"></script>
+
+<link rel="stylesheet" type="text/css" href = "../css/main.css"/>
+<link rel="stylesheet" type="text/css" href = "../css/tabbedsections.css"/>
+
+<title>Tabbed sections</title>
+
+</head>
+
+<body>
+
+<h1>Tabbed sections</h1>
+
+<p class = "shortdesc">
+Tabbed sections are one method of presenting the various sections of a page horizontally (instead of the default vertical method). Tabbed sections give the reader an immediate overview of the page content, and the facility to navigate between these blocks of content without needed to scroll up and down.
+</p>
+
+<ul>
+<li><a href = "#example">Example of tabbed sections in action</a></li>
+<li><a href = "#how">How to implement tabbed sections</a></li>
+<li><a href = "#where">Where is the Javascript code and stylesheet file</a></li>
+</ul>
+
+<h3 id = "example">Example of tabbed sections in action</h3>
+
+<div class = "tabs">
+
+<ul>
+<li><a href="#tab1">Concept</a></li>
+<li><a href="#tab2">Task</a></li>
+<li><a href="#tab3">Reference</a></li>
+<li><a href="#tab4">Integration with Product A</a></li>
+<li><a href="#tab5">Integration with Product A and B</a></li>
+<li><a href="#tab6">Integration with Product B</a></li>
+</ul>
+  
+<div id = "tab1">
+<h3>Concept</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak. Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen insaan hona. Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+</div>
+
+<div id = "tab2">
+<h3>Task</h3>
+<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak. Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona. Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla. Dil hi to hai, na sang-o-khisht, dard se na bhar aye kyun? Ek din hamare annsoon humse pooch baithe...humey roz -roz kyon bulate ho. Fir kuch is dil ko beqaraari hai, seena zoya-e-zakhm-e-kaari hai. Go hath ko jumbish nahin ankhon men to dum hai, rehne do abhi sagar-o-meena mere aage. Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke. Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal achchha hai. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+</div>
+
+<div id = "tab3">
+<h3>Reference</h3>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak. Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona. Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla. Dil hi to hai, na sang-o-khisht, dard se na bhar aye kyun? Ek din hamare annsoon humse pooch baithe...humey roz -roz kyon bulate ho. Fir kuch is dil ko beqaraari hai, seena zoya-e-zakhm-e-kaari hai. Go hath ko jumbish nahin ankhon men to dum hai, rehne do abhi sagar-o-meena mere aage. Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke. Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal achchha hai. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+</div>
+
+<div id = "tab4">
+<h3>Integration with Product A</h3>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<p><img src = "../images/green.png"><img src = "../images/grey.png"><img src = "../images/red.png"><img src = "../images/blue.png"></p>
+<p>Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak. Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona. Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla. Dil hi to hai, na sang-o-khisht, dard se na bhar aye kyun? Ek din hamare annsoon humse pooch baithe...humey roz -roz kyon bulate ho.
+</p>
+</div>
+
+<div id = "tab5">
+<h3>Integration with Product A and Product B</h3>
+<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<table><tr><td>...</td><td>....</td><td>....</td></tr></table>
+<p>Fir kuch is dil ko beqaraari hai, seena zoya-e-zakhm-e-kaari hai. 
+</p>
+</div>
+
+<div id = "tab6">
+<h3>Integration with Product B</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<pre>SELECT * FROM eyes WHERE age &lt;= 16;</pre>
+<p>Go hath ko jumbish nahin ankhon men to dum hai, rehne do abhi sagar-o-meena mere aage. Har ek baat pe kehte ho tum ke tu kya hai, tum hi kaho, ke ye andaaz-e-guftgu kya hai? Ishq ne humein nikamma kar diya Ghalib, warna aadmi they hum bade kaam ke. Jo unke dekhe se aa jati hai munh pe raunaq, to woh kehte hain: beemar ka haal achchha hai. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+</div>
+
+</div>
+
+<h3 id = "how">How to implement tabbed sections</h3>
+
+<ul>
+<li>If you author in DITA, ....
+</li>
+
+<li>If you author in HTML, do these four things:
+	<ol>
+	<li>Include the following code within the "head" tag of the HTML file  (and place the local files in the correct folders):	
+	<pre>
+	&lt;script src="https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+	&lt;script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="../scripts/tabbedsections.js"&gt;&lt;/script&gt;
+	&lt;link rel="stylesheet" type="text/css" href = "../css/tabbedsections.css"/&gt;</pre>
+	</li>
+	<li>At the location where you want to place the tabs, create a block element such as &lt;div&gt;, and give it a "class" attribute with the value "tabs", like this:
+	<pre>
+	&lt;div class = "tabs"&gt;...more elements...&lt;/div&gt;</pre>
+	</li>
+	<li>Within the block element created in step 2, insert an &lt;ul&gt; element, where the list items are links to the several sections that will make up the tabs, like this:
+	<pre>
+	&lt;div class = "tabs"&gt;
+	&lt;ul&gt;
+	&lt;li&gt;&lt;a href = "#tab1"&gt;Tab 1 heading&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href = "#tab2"&gt;Tab 2 heading&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href = "#tab3"&gt;Tab 3 heading&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;/div&gt;</pre>
+	</li>
+	<li>At the point where the &lt;ul&gt; list gets over, insert all of those sections that will make up the tabs. Ensure that each section is one complete block element. Your code will look something like this:
+	<pre>
+	&lt;div class = "tabs"&gt;
+	&lt;ul&gt;
+	&lt;li&gt;&lt;a href = "#tab1"&gt;Tab 1 heading&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href = "#tab2"&gt;Tab 2 heading&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href = "#tab3"&gt;Tab 3 heading&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div id = "tab1"&gt;&lt;h3&gt;Tab 1 heading&lt;/h3&gt;&lt;p&gt;....Tab 1 content....&lt;/p&gt;&lt;/div&gt;
+	&lt;div id = "tab2"&gt;&lt;h3&gt;Tab 2 heading&lt;/h3&gt;&lt;p&gt;....Tab 2 content....&lt;/p&gt;&lt;/div&gt;
+	&lt;div id = "tab3"&gt;&lt;h3&gt;Tab 3 heading&lt;/h3&gt;&lt;p&gt;....Tab 3 content....&lt;/p&gt;&lt;/div&gt;
+	&lt;/div&gt;</pre>
+	</li>
+	</ol>
+</li>
+</ul>
+
+<h3 id = "where">Where is the Javascript code and stylesheet file</h3>
+
+<p>The Javascript code is in the "scripts" folder, "tabbedsections.js" file. The styling rules are in the "css" folder, "tabbedsections.css" file.</p>
+
+</body>
+
+</html>

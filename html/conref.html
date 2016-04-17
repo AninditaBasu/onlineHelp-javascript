@@ -1,0 +1,100 @@
+<html>
+
+<head>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script type="text/javascript" src="../scripts/conref.js"></script>
+
+<link rel="stylesheet" type="text/css" href = "../css/main.css"/>
+
+<title>Conref in HTML</title>
+
+</head>
+
+<body>
+
+<h1>Conrefs</h1>
+
+<p class = "shortdesc">
+Content reference (conref) is the action of "calling" a piece of content located in another file. The "called" content gets placed in toto, word-for-word, image-for-image, comma-for-comma, in the location that called it as if the content had been written in the calling file itself. The conref is implemented through the "menu" class on the element that is to be called. This page contains an example implementation for the conref.js file, and the instructions for using it in your help files. 
+</p>
+
+<ul>
+<li><a href = "#how">How to implement conrefs</a></li>
+<li><a href = "#example">Example of conrefs in action</a></li>
+</ul>
+
+<h3 id = "how">How to implement conrefs</h3>
+
+<ul>
+<li>If you author in DITA, you don't need to read further. DITA handles conrefs natively.
+</li>
+<li>If you author in HTML, you can conref in two ways:
+	<ul>
+	<li>Reuse a block of content in a file, within the same file</li>
+	<li>Reuse an entire file, within a file in the same directory</li>
+	</ul>
+</li>
+</ul>
+<p>Conrefs in HTML do not seem to work for anchor tags in another file (abc.html#xyz), which means discrete blocks of content from file A cannot be called by file B (the entire file needs to be called). Calling anchor tags within a file works fine. Also, conrefs seem to work only within the same directory. The third caveat is that links in conref-ed content are rendered link-less at the place where they're called. The final gotcha: calling file A from file B does not work <i><u>sometimes</u></i> on a local drive (but always works if both files are on a server).</p>
+
+<p>If you're fine with all that, read on for instructions:</p>
+	<ol>
+	<li>Include the following code within the "head" tag of the HTML file:	
+	<pre>
+	&lt;script src="https://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+	&lt;script src = "https://code.jquery.com/ui/1.11.4/jquery-ui.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript" src="../scripts/conref.js"&gt;&lt;/script&gt;</pre>
+	</li>
+	<li>To reuse a block of content within the same file:
+	<ol>
+	<li>For the block that contains the content to be called, give an ID attribute, like this: 
+	<pre>
+	&lt;p id = "reusable"&gt;Lorem lorem lorem&lt;div&gt;	</pre>
+	</li>
+	<li>Specify this ID in the content.js Javascript file and give it a calling class. The file is commented to show you where and how you need to do the changes. Here is an example:
+	<pre>
+	$("#reusable" ).clone().appendTo( ".caller" )</pre>
+	</li>
+	<li>At the place where the content is to be called, create an empty block of the same element type as the conref, and call the content by giving it the class that you specified in step 2, like this:
+	<pre>
+	&lt;p class = "caller"&gt;&lt;div&gt;</pre>
+	</li>
+	</ol>
+	</li>
+	<li>To reuse another file:
+	<ol>
+	<li>At the place where the content is to be called, create a block element such as &lt;p&gt; or &lt;div&gt; and give it an ID, like this:
+	<pre>
+	&lt;p id = "mydiv1"&gt;&lt;div&gt;</pre>
+	</li>
+	<li>Specify this ID in the content.js Javascript file and link it to the html file that is to be called. The file is commented to show you where and how you need to do the changes. Here's an example (where the contents of the ref_content.html file is being linked to a has ID mydiv1):
+	<pre>
+	$('#mydiv1').load('ref_content.html');</pre>
+	</li>
+	</ol>
+	</li>
+	</ol>
+
+<h3 id = "example">Example of conrefs in action</h3>
+
+<div>
+<p id = "reusable">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+Aah  ko chaahiye  ik umr  asar hone  tak, kaun jeeta hai teree zulf ke sar hone tak. Bas ki dushwaar hai har kaam ka aasaan hona, admi ko bhi muyassar naheen  insaan hona.
+Chand tasveer-e-buta, chand haseeno ke khatoot, bad marne ke mere ghar se ye saaman nikla.
+</p>
+</div>
+
+<p>The immediately following paragraph calls the immediately preceding Lorem Ipsum paragraph.</p>
+
+<p class = "caller" style = "font-family:arial; font-size: 75%"></p>
+
+<p>The following content is called from another file.</p>
+
+<p id = "mydiv1"></p>
+
+</body>
+
+</html>

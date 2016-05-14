@@ -11,4 +11,4 @@ The following JavaScript effects are available:
 -    Show the content of a footnote on hover
 -    Display the sections of a large page in horizontal tabs instead of vertical sections
 
-Usage instructions and working examples are in [documentation](./html/documentation.html).
+Usage instructions and working examples are in `html` > `documentation.html`.

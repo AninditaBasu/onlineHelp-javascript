@@ -1,64 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+<head>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="./stylesheets/w3.css">
+<link rel="stylesheet" href="./stylesheets/w3-theme-deep-purple.css">
+<link rel="stylesheet" href="./stylesheets/custom.css">
     
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Onlinehelp JavaScript by Anindita Basu</title>
-  </head>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-  <body>
-    <div id="container">
-      <div class="inner">
+<title>JavaScript for online help files by Anindita Basu</title>
 
-        <header>
-          <h1>JavaScript for your online help files</h1>
-        </header>
+</head>
 
-        <hr>
+<body>
 
-        <section id="main_content">
-          <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Here are some JavaScript code snippets for HTML files in an online help system.</h3>
+<div class = "w3-container w3-padding">
+<header class="w3-theme-dark w3-padding">
+<h1>JavaScript for online help files</h1>
+</header>
+</div>
 
-<p>If the final output of your online help files is HTML, you can include these code snippets in your HTML transforms. The files use the jQuery and the jQuery UI libraries, and are implemented through the "class" attribute of HTML elements. Therefore, the code will work on any element that takes a "class" attribute.</p>
+<div class = "w3-container w3-padding">
 
-<p>The following effects are available for your use:</p>
+<p>Sometimes, a few lines of JavaScript is all it takes to make an online help system more friendly. Footnotes and glossary terms displayed on mousever, sections of a page presented as horizontal tabs, additional information that can be revealed or hidden on click &mdash; all of these are things that enhance UX.</p>
 
-<ul>
-<li>On page load, display blocks of content by DITA-like content referencing (content reuse)</li>
-<li>On click, show or hide blocks of content</li>
-<li>On mouseover, display the text of a footnote</li>
-<li>On page load, display the several sections of a page as tabs</li>
-</ul>
+<p>And then, there's you, the writer. What about WX (writer experience)? What if there was a way to write something once, and then reuse it across multiple files in the same folder? Everyone says you need DITA for that, but that's not true. HTML has something called transclusion that was made just for this scenario. Include a few of lines of JavaScript to your HTML files, and you have the conref feature of DITA right in HTML.</p>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/AninditaBasu/onlineHelp-javascript/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/AninditaBasu/onlineHelp-javascript/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/AninditaBasu/onlineHelp-javascript" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>Code samples and example implementations are available for download from GitHub.</p>
 
-<p>Anindita Basu (<a href="https://github.com/AninditaBasu" class="user-mention">@AninditaBasu</a>)</p>
+<p><button class="w3-btn w3-round-large w3-theme-l4 w3-border"><a href="https://github.com/AninditaBasu/onlineHelp-javascript/zipball/master" class = "noline">Download .zip</a></button>
+<button class="w3-btn w3-round-large w3-theme-l4 w3-border"><a href="https://github.com/AninditaBasu/onlineHelp-javascript/tarball/master" class = "noline">Download .tar.gz</a></button>
+<button class="w3-btn w3-round-large w3-theme-l4 w3-border"><a href="https://github.com/AninditaBasu/onlineHelp-javascript" class = "noline">View on GitHub</a></button></p>
 
-        </section>
+<p>The files use the jQuery and the jQuery UI libraries, and are implemented through the <code>class</code> attribute of HTML elements. Therefore, you can use these effects of any element that can take a <code>class</code> attribute.</p>
 
-        <footer>
-          Onlinehelp-javascript is maintained by <a href="https://github.com/AninditaBasu">AninditaBasu</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+<table class="w3-table w3-striped w3-bordered">
+<thead>
+<tr class = "w3-theme-l4">
+<th>Effect</th>
+<th>When to use</th>
+<th>Working example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Write once, call anywhere. DITA-like content referencing (conref)</td>
+<td>To do away with copy-paste of frequently repeated content, by implementing DITA-like content referencing</td>
+<td><a href = "https://rawgit.com/AninditaBasu/onlineHelp-javascript/master/html/conref.html" target = "_blank">conref.html</a></td>
+</tr>
+<tr>
+<td>Show or hide blocks of content on click</td>
+<td>To provide additional information without otherwise breaking the flow of a bit of text in a topic</td>
+<td><a href = "https://rawgit.com/AninditaBasu/onlineHelp-javascript/master/html/twistie.html" target = "_blank">twistie.html</a></td>
+</tr>
+<tr>
+<td>Display the text of a footnote on mouseover</td>
+<td>To give an option to the reader to not jump up and down within the document, but rather to stay within the context of the paragraph currently being read</td>
+<td><a href = "https://rawgit.com/AninditaBasu/onlineHelp-javascript/master/html/fnotehovertext.html" target = "_blank">fnotehovertext.html</a></td>
+</tr>
+<tr>
+<td>Show the several sections of a page as tabs</td>
+<td>To give the reader an immediate overview of the page content, and the facility to navigate between the page sections  without needed to scroll up and down</td>
+<td><a href = "https://rawgit.com/AninditaBasu/onlineHelp-javascript/master/html/tabbedsections.html" target = "_blank">tabbedsections.html</a></td>
+</tr>
+</tbody>
+</table>
 
-        
-      </div>
-    </div>
-  </body>
+<p class = "w3-padding w3-leftbar w3-border-deep-purple"><i>If there is something that you'd like your help files to have, but don't see it there, <a href = "https://github.com/AninditaBasu/onlineHelp-javascript/issues" target = "_blank">ask for an enhancement</a>. I'll try my best to help.</i></p>
+
+</div>
+
+<div class = "w3-container w3-padding">
+<hr/>
+</footer>
+</div>
+
+</body>
+  
 </html>

@@ -6,8 +6,6 @@ If the final output of your online help files is HTML, you can include these cod
 
 ## Features
 
-The following JavaScript effects are available:
-
 -    Content referencing in HTML
 -    Show or hide blocks of content on demand
 -    Show the content of a footnote on hover
@@ -15,7 +13,7 @@ The following JavaScript effects are available:
 
 ## Installation and use
 
-Download this entire repository as a `.zip` file and look at the files. Usage instructions and working examples are in `html` > `documentation.html`.
+Download this repository as a `.zip` file, and look at the working examples.  Documentation is in [JavaScript for online help files](http://aninditabasu.github.io/onlineHelp-javascript/).
 
 ## Bugs and enhancements
 
@@ -23,4 +21,4 @@ Use GitHub's issue tracking feature.
 
 ## License
 
-The code is under [GPL 3](https://opensource.org/licenses/GPL-3.0), which is a copyleft license. You are free to use and distribute this code as-is. You are also free to modify and distribute this code _provided_ you distribute such modified code under the same license as this one, that is GPL 3.
+The code is under [GPL 3](https://opensource.org/licenses/GPL-3.0), which is a copyleft license. You are free to use and distribute this code as-is. You are also free to modify and distribute this code provided you distribute such modified code under the same license as this one, that is GPL 3.
